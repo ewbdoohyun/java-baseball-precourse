@@ -2,7 +2,7 @@ package baseball.service;
 
 import nextstep.utils.Randoms;
 
-public class BaseballGameNumberService {
+public class NumberGeneratorService {
 
     public int getNewNumber() {
         int baseBallNum;
