@@ -2,7 +2,7 @@ package baseball.service;
 
 public class GameRunnerService {
 
-    public int calculateStrike(int target,int input){
+    public int calculateStrikes(int target, int input){
         int matchedCnt = 0;
 
         matchedCnt += (target / 100 == input / 100) ? 1 : 0;
