@@ -18,6 +18,7 @@ public class NumberGeneratorServiceTest {
         assertFalse((Boolean) method.invoke(numberGeneratorService,100));
         assertFalse((Boolean) method.invoke(numberGeneratorService,999));
         assertFalse((Boolean) method.invoke(numberGeneratorService,122));
+        assertFalse((Boolean) method.invoke(numberGeneratorService,908));
         assertFalse((Boolean) method.invoke(numberGeneratorService,988));
         assertTrue((Boolean) method.invoke(numberGeneratorService,123));
         assertTrue((Boolean) method.invoke(numberGeneratorService,275));
