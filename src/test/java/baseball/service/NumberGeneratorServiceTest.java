@@ -3,9 +3,6 @@ package baseball.service;
 import baseball.utils.NumberChecker;
 import org.junit.jupiter.api.Test;
 
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 public class NumberGeneratorServiceTest {
@@ -13,13 +10,13 @@ public class NumberGeneratorServiceTest {
     @Test
     void 번호발생_체크() {
 
-        assertFalse(NumberChecker.isValidBaseBallNum(102));
-        assertFalse(NumberChecker.isValidBaseBallNum(999));
-        assertFalse(NumberChecker.isValidBaseBallNum(122));
-        assertFalse(NumberChecker.isValidBaseBallNum(908));
-        assertFalse(NumberChecker.isValidBaseBallNum(988));
-        assertTrue(NumberChecker.isValidBaseBallNum(123));
-        assertTrue(NumberChecker.isValidBaseBallNum(275));
+        assertFalse(NumberChecker.isValidBaseballNum(102));
+        assertFalse(NumberChecker.isValidBaseballNum(999));
+        assertFalse(NumberChecker.isValidBaseballNum(122));
+        assertFalse(NumberChecker.isValidBaseballNum(908));
+        assertFalse(NumberChecker.isValidBaseballNum(988));
+        assertTrue(NumberChecker.isValidBaseballNum(123));
+        assertTrue(NumberChecker.isValidBaseballNum(275));
 
     }
 }

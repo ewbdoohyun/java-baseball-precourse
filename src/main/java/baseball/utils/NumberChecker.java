@@ -5,7 +5,7 @@ public class NumberChecker {
     private NumberChecker() {
     }
 
-    public static boolean isValidBaseBallNum(int num) {
+    public static boolean isValidBaseballNum(int num) {
         if (num >= 1000 || num < 123) {
             return false;
         }
