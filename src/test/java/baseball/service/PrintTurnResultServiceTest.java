@@ -32,7 +32,7 @@ class PrintTurnResultServiceTest {
 
     @Test
     void printWrongResult() {
-        printTurnResultService.printResult(new GameResultVo(2,3));
+        printTurnResultService.printResult(GameResultVo.getFailGame());
         assertEquals(outputStreamCaptor.toString().trim(),WRONG_MESSAGE);
     }
     @Test
