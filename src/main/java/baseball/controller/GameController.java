@@ -1,7 +1,7 @@
 package baseball.controller;
 
-import baseball.service.GameRetryService;
-import baseball.service.GameRunnerService;
+import baseball.service.console.GameRetryService;
+import baseball.service.console.GameRunnerService;
 
 public class GameController {
 
