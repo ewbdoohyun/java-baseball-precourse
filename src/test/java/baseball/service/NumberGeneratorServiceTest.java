@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class NumberGeneratorServiceTest {
 
     @Test
-    void 번호발생_체크() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
+    void 번호발생_체크() {
 
         assertFalse(NumberChecker.isValidBaseBallNum(102));
         assertFalse(NumberChecker.isValidBaseBallNum(999));
