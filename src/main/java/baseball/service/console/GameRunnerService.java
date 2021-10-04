@@ -11,7 +11,7 @@ import java.util.NoSuchElementException;
 
 public class GameRunnerService {
 
-    public static final int WRONG_INPUT_NUM = 0;
+    public static final int WRONG_INPUT_NUM = -1;
 
     private final NumberGeneratorService numberGeneratorService;
     private final PrintTurnResultService printTurnResultService;
@@ -40,12 +40,14 @@ public class GameRunnerService {
             System.out.println("[ERROR] 비정상적 동작으로 서비스를 종료합니다.");
             throw e;
         }catch (NumberFormatException e){
+            // 문자열 잘못 입력 받은것도 복구해서 사용하길 원하여 익셉션을 별도 값으로 처리
             return WRONG_INPUT_NUM;
         }
     }
 
     private int validateBaseBallNumber(int num) throws NumberFormatException {
         if (!NumberChecker.isValidBaseballNum(num)) {
+            // 관리용 메세지
             throw new NumberFormatException("[ERROR] 잘못된 번호를 입력하였습니다.");
         }
         return num;

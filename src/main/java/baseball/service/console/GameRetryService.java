@@ -8,6 +8,9 @@ import static baseball.service.console.GameRunnerService.WRONG_INPUT_NUM;
 
 public class GameRetryService {
 
+    private static final int RETRY_VALUE = 1;
+    public static final int EXIT_VALUE = 2;
+
     public int isRetry() {
         int retryNum;
         do {
@@ -23,7 +26,7 @@ public class GameRetryService {
         return num;
     }
     private boolean isRetryMagicNumber(int num){
-        if( 0 < num  && num < 3){
+        if( RETRY_VALUE == num  || EXIT_VALUE == num ){
             return true;
         }
         return false;
