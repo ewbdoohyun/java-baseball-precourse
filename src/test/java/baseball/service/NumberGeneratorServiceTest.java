@@ -1,5 +1,6 @@
 package baseball.service;
 
+import baseball.utils.NumberChecker;
 import org.junit.jupiter.api.Test;
 
 import java.lang.reflect.InvocationTargetException;
@@ -11,16 +12,14 @@ public class NumberGeneratorServiceTest {
 
     @Test
     void 번호발생_체크() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
-        NumberGeneratorService numberGeneratorService = new NumberGeneratorService();
-        Method method = numberGeneratorService.getClass().getDeclaredMethod("isValidBaseBallNum",int.class);
-        method.setAccessible(true);
 
-        assertFalse((Boolean) method.invoke(numberGeneratorService,100));
-        assertFalse((Boolean) method.invoke(numberGeneratorService,999));
-        assertFalse((Boolean) method.invoke(numberGeneratorService,122));
-        assertFalse((Boolean) method.invoke(numberGeneratorService,908));
-        assertFalse((Boolean) method.invoke(numberGeneratorService,988));
-        assertTrue((Boolean) method.invoke(numberGeneratorService,123));
-        assertTrue((Boolean) method.invoke(numberGeneratorService,275));
+        assertFalse(NumberChecker.isValidBaseBallNum(102));
+        assertFalse(NumberChecker.isValidBaseBallNum(999));
+        assertFalse(NumberChecker.isValidBaseBallNum(122));
+        assertFalse(NumberChecker.isValidBaseBallNum(908));
+        assertFalse(NumberChecker.isValidBaseBallNum(988));
+        assertTrue(NumberChecker.isValidBaseBallNum(123));
+        assertTrue(NumberChecker.isValidBaseBallNum(275));
+
     }
 }
